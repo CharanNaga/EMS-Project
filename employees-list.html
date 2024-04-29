@@ -110,7 +110,7 @@
                         <tr class="text-center">
                             <td>1</td>
                             <td>403</td>
-                            <td>Charan</td>
+                            <td>Charan Singh</td>
                             <td>charan@test.com</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
@@ -141,7 +141,7 @@
                         <tr class="text-center">
                             <td>2</td>
                             <td>405</td>
-                            <td>Swaroop</td>
+                            <td>Swaroop Teja</td>
                             <td>swaroop@test.com</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
@@ -172,7 +172,7 @@
                         <tr class="text-center">
                             <td>3</td>
                             <td>429</td>
-                            <td>Vishnu</td>
+                            <td>Vishnu Reddy</td>
                             <td>vishnu@test.com</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
@@ -202,7 +202,7 @@
                         <tr class="text-center">
                             <td>4</td>
                             <td>447</td>
-                            <td>Neeraj</td>
+                            <td>Neeraj Krishna</td>
                             <td>neeraj@test.com</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
@@ -292,7 +292,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-10">
+                                    <div class="col-md-9">
                                         <div class="d-grid">
                                             <button type="submit" class="btn btn-sm btn-success">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
@@ -304,9 +304,13 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <div class="d-grid">
                                             <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+                                                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+                                                </svg>
                                                 Close
                                             </button>
                                         </div>
@@ -319,6 +323,74 @@
             </div>
     </div>
     <!-- Add Employee Modal -->
+
+     <!--Employee Detail Modal -->
+     <div class="modal fade" id="employeeDetail" data-bs-backdrop="static" data-bs-keyboard="false"
+     tabindex="-1" aria-hidden="true" style="backdrop-filter: blur(5px);">
+         <div class="modal-dialog modal-dialog-centered">
+             <div class="modal-content">
+                 <div class="modal-header text-bg-dark">
+                     <h5 class="modal-title">Employee Details</h5>
+                     <button type="button" class="btn btn-close bg-white" data-bs-dismiss="modal"
+                         aria-label="Close"></button>
+                 </div>
+                 <div class="modal-body p-0">
+                    <table class="table table-bordered small mb-0">
+                        <tr>
+                            <th class="w-50">ID</th>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th>Employee ID</th>
+                            <td>403</td>
+                        </tr>
+                        <tr>
+                            <th>First Name</th>
+                            <td>Charan</td>
+                        </tr>
+                        <tr>
+                            <th>Last Name</th>
+                            <td>Singh</td>
+                        </tr>
+                        <tr>
+                            <th>Email ID</th>
+                            <td>charan@test.com</td>
+                        </tr>
+                        <tr>
+                            <th>Mobile Number</th>
+                            <td>+91-8919701146</td>
+                        </tr>
+                        <tr>
+                            <th>Joining Date</th>
+                            <td>31<sup>st</sup> March 2023</td>
+                        </tr>
+                    </table>
+                 </div>
+
+                 <div class="modal-footer">
+                    <a href="#" class="btn btn-sm btn-warning" data-bs-toggle="modal"
+                        data-bs-target="employeeUpdate">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                          </svg>
+                        Employee
+                    </a>
+
+                    <a href="#" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+                            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+                          </svg>
+                        Close
+                    </a>
+                 </div>
+             </div>
+         </div>
+ </div>
+ <!-- Employee Detail Modal -->
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
