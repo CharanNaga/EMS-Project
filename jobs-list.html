@@ -110,7 +110,7 @@
                             <td>Data Analyst</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                                    data-bs-target="#jobDetail1">
+                                data-bs-target="#jobDetailModal" onclick="populateJobDetail(jobsData[0]);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
                                         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
                                       </svg>
@@ -139,7 +139,7 @@
                             <td>Data Engineer</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                                    data-bs-target="#jobDetail2">
+                                data-bs-target="#jobDetailModal" onclick="populateJobDetail(jobsData[1]);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
                                         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
                                       </svg>
@@ -168,7 +168,7 @@
                             <td>Data Scientist</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                                    data-bs-target="#jobDetail3">
+                                data-bs-target="#jobDetailModal" onclick="populateJobDetail(jobsData[2]);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
                                         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
                                       </svg>
@@ -196,7 +196,7 @@
                             <td>Web Developer</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                                    data-bs-target="#jobDetail4">
+                                data-bs-target="#jobDetailModal" onclick="populateJobDetail(jobsData[3]);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
                                         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
                                       </svg>
@@ -284,208 +284,51 @@
     </div>
     <!-- Add Job Modal -->
 
-     <!--Job Detail Modal-1 -->
-     <div class="modal fade" id="jobDetail1" data-bs-backdrop="static" data-bs-keyboard="false"
-     tabindex="-1" aria-hidden="true" style="backdrop-filter: blur(5px);">
-         <div class="modal-dialog modal-dialog-centered">
-             <div class="modal-content">
-                 <div class="modal-header text-bg-dark">
-                     <h5 class="modal-title">Job Details</h5>
-                     <button type="button" class="btn btn-close bg-white" data-bs-dismiss="modal"
-                         aria-label="Close"></button>
-                 </div>
-                 <div class="modal-body p-0">
-                    <table class="table table-bordered small mb-0">
-                        <tr>
-                            <th class="w-50">ID</th>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th>Opening Date</th>
-                            <td>31<sup>st</sup> March 2023</td>
-                        </tr>
-                        <tr>
-                            <th>Job Name</th>
-                            <td>Data Analyst</td>
-                        </tr>
-                    </table>
-                 </div>
+     <!-- Job Detail Modal -->
+<div class="modal fade" id="jobDetailModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true" style="backdrop-filter: blur(5px);">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-bg-dark">
+                <h5 class="modal-title">Job Details</h5>
+                <button type="button" class="btn btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <table class="table table-bordered small mb-0">
+                    <tr>
+                        <th class="w-50">ID</th>
+                        <td id="jobId"></td>
+                    </tr>
+                    <tr>
+                        <th>Opening Date</th>
+                        <td id="jobDate"></td>
+                    </tr>
+                    <tr>
+                        <th>Job Name</th>
+                        <td id="jobName"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-sm btn-warning" id="jobEditBtn" data-bs-toggle="modal" data-bs-target="#jobUpdateModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                    </svg>
+                    Edit
+                </a>
+                <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+                    </svg>
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Job Detail Modal -->
 
-                 <div class="modal-footer">
-                    <a href="#" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                        data-bs-target="#jobUpdate1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                          </svg>
-                        Job
-                    </a>
-
-                    <a href="#" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
-                            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
-                          </svg>
-                        Close
-                    </a>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <!-- Job Detail Modal-1 -->
-
-
-     <!--Job Detail Modal-2 -->
-     <div class="modal fade" id="jobDetail2" data-bs-backdrop="static" data-bs-keyboard="false"
-     tabindex="-1" aria-hidden="true" style="backdrop-filter: blur(5px);">
-         <div class="modal-dialog modal-dialog-centered">
-             <div class="modal-content">
-                 <div class="modal-header text-bg-dark">
-                     <h5 class="modal-title">Job Details</h5>
-                     <button type="button" class="btn btn-close bg-white" data-bs-dismiss="modal"
-                         aria-label="Close"></button>
-                 </div>
-                 <div class="modal-body p-0">
-                    <table class="table table-bordered small mb-0">
-                        <tr>
-                            <th class="w-50">ID</th>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <th>Opening Date</th>
-                            <td>21<sup>st</sup> September 2022</td>
-                        </tr>
-                        <tr>
-                            <th>Job Name</th>
-                            <td>Data Engineer</td>
-                        </tr>
-                    </table>
-                 </div>
-
-                 <div class="modal-footer">
-                    <a href="#" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                        data-bs-target="#jobUpdate2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                          </svg>
-                        Job
-                    </a>
-
-                    <a href="#" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
-                            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
-                          </svg>
-                        Close
-                    </a>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <!-- Job Detail Modal-2 -->
-
-
-     <!--Job Detail Modal-3 -->
-     <div class="modal fade" id="jobDetail3" data-bs-backdrop="static" data-bs-keyboard="false"
-     tabindex="-1" aria-hidden="true" style="backdrop-filter: blur(5px);">
-         <div class="modal-dialog modal-dialog-centered">
-             <div class="modal-content">
-                 <div class="modal-header text-bg-dark">
-                     <h5 class="modal-title">Job Details</h5>
-                     <button type="button" class="btn btn-close bg-white" data-bs-dismiss="modal"
-                         aria-label="Close"></button>
-                 </div>
-                 <div class="modal-body p-0">
-                    <table class="table table-bordered small mb-0">
-                        <tr>
-                            <th class="w-50">ID</th>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <th>Opening Date</th>
-                            <td>19<sup>th</sup> November 2022</td>
-                        </tr>
-                        <tr>
-                            <th>Job Name</th>
-                            <td>Data Scientist</td>
-                        </tr>
-                    </table>
-                 </div>
-
-                 <div class="modal-footer">
-                    <a href="#" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                        data-bs-target="#jobUpdate3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                          </svg>
-                        Job
-                    </a>
-
-                    <a href="#" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
-                            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
-                          </svg>
-                        Close
-                    </a>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <!-- Job Detail Modal-3 -->
-
-
-     <!--Job Detail Modal-4 -->
-     <div class="modal fade" id="jobDetail4" data-bs-backdrop="static" data-bs-keyboard="false"
-     tabindex="-1" aria-hidden="true" style="backdrop-filter: blur(5px);">
-         <div class="modal-dialog modal-dialog-centered">
-             <div class="modal-content">
-                 <div class="modal-header text-bg-dark">
-                     <h5 class="modal-title">Job Details</h5>
-                     <button type="button" class="btn btn-close bg-white" data-bs-dismiss="modal"
-                         aria-label="Close"></button>
-                 </div>
-                 <div class="modal-body p-0">
-                    <table class="table table-bordered small mb-0">
-                        <tr>
-                            <th class="w-50">ID</th>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <th>Opening Date</th>
-                            <td>24<sup>th</sup> June 2023</td>
-                        </tr>
-                        <tr>
-                            <th>Job Name</th>
-                            <td>Web Developer</td>
-                        </tr>
-                    </table>
-                 </div>
-
-                 <div class="modal-footer">
-                    <a href="#" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                        data-bs-target="#jobUpdate4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                          </svg>
-                        Job
-                    </a>
-
-                    <a href="#" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
-                            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
-                          </svg>
-                        Close
-                    </a>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <!-- Job Detail Modal-4 -->
 
      <!-- Edit Job Modal-1 -->
      <div class="modal fade" id="jobUpdate1" data-bs-backdrop="static" data-bs-keyboard="false"
@@ -859,6 +702,53 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to populate job detail modal with data
+        function populateJobDetail(jobData) {
+            document.getElementById('jobId').innerText = jobData.id;
+            document.getElementById('jobDate').innerText = jobData.jobDate;
+            document.getElementById('jobName').innerText = jobData.jobName;
+        }
+    
+        // Example job data for four records
+        var jobsData = [
+            {
+                id: 1,
+                jobDate: '31st March 2023',
+                jobName: 'Data Analyst'
+            },
+            {
+                id: 2,
+                jobDate: '21st September 2022',
+                jobName: 'Data Engineer'
+            },
+            {
+                id: 3,
+                jobDate: '19th November 2022',
+                jobName: 'Data Scientist'
+            },
+            {
+                id: 4,
+                jobDate: '24th June 2023',
+                jobName: 'Web Developer'
+            }
+        ];
+    
+        // Display details for the first job by default
+        populateJobDetail(jobsData[0]);
+    
+        // Set event listeners to change job details when clicking on different jobs
+        for (let i = 0; i < jobsData.length; i++) {
+            document.getElementById('jobDetail' + (i + 1)).addEventListener('click', function() {
+                changeJobDetail(i);
+            });
+        }
+    
+        // Function to change job details in the modal
+        function changeJobDetail(index) {
+            populateJobDetail(jobsData[index]);
+        }
+    </script>
 </body>
 
 </html>
