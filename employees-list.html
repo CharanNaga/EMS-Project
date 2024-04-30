@@ -100,167 +100,7 @@
                 <div class="card shadow-sm border-0 mb-3">
                     <div class="card-header text-bg-dark text-center">Employees List</div>
                     <table class="table table-sm small table-bordered align-middle mb-0">
-                        <tr class="table-secondary text-center">
-                            <th>Id</th>
-                            <th>Employee Id</th>
-                            <th>Name</th>
-                            <th>Email ID</th>
-                            <th>Action</th>
-                        </tr>
-                        <tr class="text-center">
-                            <td>1</td>
-                            <td>403</td>
-                            <td>Charan Singh</td>
-                            <td>charan@test.com</td>
-                            <td>
-                                <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                                    data-bs-target="#employeeDetailModal"
-                                    onclick="populateEmployeeDetail(employeesData[0]);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
-                                    </svg>
-                                    Details
-                                </a>
-                                <a href="#" class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
-                                    data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(0);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                        <path fill-rule="evenodd"
-                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
-                                    </svg>
-                                    Edit
-                                </a>
-                                <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#employeeDeleteModal" onclick="handleRemoveButtonClick(0);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
-                                    </svg>
-                                    Delete
-                                </a>
-                            </td>
-                        </tr>
-
-                        <tr class="text-center">
-                            <td>2</td>
-                            <td>405</td>
-                            <td>Swaroop Teja</td>
-                            <td>swaroop@test.com</td>
-                            <td>
-                                <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                                    data-bs-target="#employeeDetailModal"
-                                    onclick="populateEmployeeDetail(employeesData[1]);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
-                                    </svg>
-                                    Details
-                                </a>
-                                <a href="#" class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
-                                    data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(1);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                        <path fill-rule="evenodd"
-                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
-                                    </svg>
-                                    Edit
-                                </a>
-                                <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#employeeDeleteModal" onclick="handleRemoveButtonClick(1);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
-                                    </svg>
-                                    Delete
-                                </a>
-                            </td>
-                        </tr>
-
-                        <tr class="text-center">
-                            <td>3</td>
-                            <td>429</td>
-                            <td>Vishnu Reddy</td>
-                            <td>vishnu@test.com</td>
-                            <td>
-                                <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                                    data-bs-target="#employeeDetailModal"
-                                    onclick="populateEmployeeDetail(employeesData[2]);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
-                                    </svg>
-                                    Details
-                                </a>
-                                <a href="#" class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
-                                    data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(2);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                        <path fill-rule="evenodd"
-                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
-                                    </svg>
-                                    Edit
-                                </a>
-                                <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#employeeDeleteModal" onclick="handleRemoveButtonClick(2);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
-                                    </svg>
-                                    Delete
-                                </a>
-                            </td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>4</td>
-                            <td>447</td>
-                            <td>Neeraj Krishna</td>
-                            <td>neeraj@test.com</td>
-                            <td>
-                                <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                                    data-bs-target="#employeeDetailModal"
-                                    onclick="populateEmployeeDetail(employeesData[3]);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
-                                    </svg>
-                                    Details
-                                </a>
-                                <a href="#" class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
-                                    data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(3);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                        <path fill-rule="evenodd"
-                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
-                                    </svg>
-                                    Edit
-                                </a>
-                                <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#employeeDeleteModal" onclick="handleRemoveButtonClick(3);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
-                                    </svg>
-                                    Delete
-                                </a>
-                            </td>
-                        </tr>
+                        <tbody></tbody>
                     </table>
                 </div>
             </div>
@@ -607,7 +447,10 @@
         }
 
         const employeeNames = [
-            { empName: 'Charan Singh' }, { empName: 'Swaroop Teja' }, { empName: 'Vishnu Reddy' }, { empName: 'Neeraj Krishna' }
+            { id: 1, employeeId: 403, empName: 'Charan Singh', email: 'charan@test.com' },
+            { id: 2, employeeId: 405, empName: 'Swaroop Teja', email: 'swaroop@test.com'},
+            { id: 3, employeeId: 429, empName: 'Vishnu Reddy', email: 'vishnu@test.com' },
+            { id: 4, employeeId: 447, empName: 'Neeraj Krishna', email:'neeraj@test.com' }
         ];
 
         function populateRemoveModal(empIdx) {
@@ -618,7 +461,58 @@
 
         function handleRemoveButtonClick(empIdx) {
             populateRemoveModal(empIdx);
+            const deleteEmp = () => {
+                employeeNames.splice(empIdx, 1);
+
+                // Close the modal
+                const closingModal = document.getElementById('employeeDeleteModal');
+                const deleteModalInstance = bootstrap.Modal.getInstance(closingModal);
+                deleteModalInstance.hide();
+
+                // Update the displayed employees list
+                displayEmployees();
+            };
+
+            // Attach click event to delete button
+            document.querySelector('#employeeDeleteModal .btn-danger').addEventListener('click', deleteEmp);
         }
+
+        function displayEmployees() {
+            const employeesTable = document.querySelector('.table-bordered');
+            employeesTable.innerHTML = `
+        <tr class="table-secondary text-center">
+            <th>Id</th>
+            <th>Employee Id</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    `;
+
+            employeeNames.forEach((employee, idx) => {
+                employeesTable.innerHTML += `
+            <tr class="text-center">
+                <td>${idx + 1}</td>
+                <td>${employee.employeeId}</td>
+                <td>${employee.empName}</td>
+                <td>
+                    <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
+                        data-bs-target="#employeeDetailModal" onclick="populateEmployeeDetail(employeesData[${idx}]);">
+                        Details
+                    </a>
+                    <a href="#" class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
+                        data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(${idx});">
+                        Edit
+                    </a>
+                    <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#employeeDeleteModal" onclick="handleRemoveButtonClick(${idx});">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        `;
+            });
+        }
+        displayEmployees();
     </script>
 </body>
 </html>
