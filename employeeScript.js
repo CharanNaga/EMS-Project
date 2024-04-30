@@ -1,3 +1,4 @@
+var editEmployeeIdx = null;
 function populateEmployeeDetail(employeeData) {
     document.getElementById('employeeId').innerText = employeeData.id;
     document.getElementById('employeeEmployeeId').innerText = employeeData.employeeId;
@@ -46,7 +47,7 @@ var employeesData = [
         lastName: 'Krishna',
         email: 'neeraj@test.com',
         mobile: '+91-7265312582',
-        joiningDate: '2023-06-24',
+        joiningDate: '2023-06-23',
         jobType: 'Web Developer'
     }
 ];
@@ -142,8 +143,17 @@ function handleEditFromDetailClick() {
     // Find the index of the employee in employeesData array based on employeeId
     const empIdx = employeesData.findIndex(employee => employee.employeeId === parseInt(employeeId));
 
+    editEmployeeIdx = empIdx;
+
     // Populate the Edit modal with employee data
     populateEditModal(empIdx);
+
+    const updatingForm = document.querySelector('#employeeUpdateModal form');
+    updatingForm.removeEventListener('submit', saveEmployeeChanges);
+    updatingForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        saveEmployeeChanges();
+    });
 }
 
 
@@ -158,10 +168,13 @@ function populateEditModal(empIdx) {
     editModal.querySelector('#editEmployeePhone').value = employeeContent.mobile;
     editModal.querySelector('#editEmployeeJoiningDate').value = employeeContent.joiningDate;
     editModal.querySelector('#editEmployeeJobType').value = employeeContent.jobType;
+
+    editEmployeeIdx = empIdx;
 }
 
 // Function to handle Edit button click
 function handleEditButtonClick(empIdx) {
+    editEmployeeIdx = empIdx;
     populateEditModal(empIdx);
 
     // Add event listener for form submission
@@ -169,19 +182,19 @@ function handleEditButtonClick(empIdx) {
     editForm.removeEventListener('submit', saveEmployeeChanges); // Remove any existing listener
     editForm.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent default form submission behavior
-        saveEmployeeChanges(empIdx); // Call saveEmployeeChanges function
+        saveEmployeeChanges(); // Call saveEmployeeChanges function
     });
 }
 // Function to save changes made to an employee
 function saveEmployeeChanges(empIdx) {
     const editModal = document.getElementById('employeeUpdateModal');
-    employeesData[empIdx].employeeId = editModal.querySelector('#editEmployeeId').value;
-    employeesData[empIdx].firstName = editModal.querySelector('#editEmployeeFirstName').value;
-    employeesData[empIdx].lastName = editModal.querySelector('#editEmployeeLastName').value;
-    employeesData[empIdx].email = editModal.querySelector('#editEmployeeEmail').value;
-    employeesData[empIdx].mobile = editModal.querySelector('#editEmployeePhone').value;
-    employeesData[empIdx].joiningDate = editModal.querySelector('#editEmployeeJoiningDate').value;
-    employeesData[empIdx].jobType = editModal.querySelector('#editEmployeeJobType').value;
+    employeesData[editEmployeeIdx].employeeId = editModal.querySelector('#editEmployeeId').value;
+    employeesData[editEmployeeIdx].firstName = editModal.querySelector('#editEmployeeFirstName').value;
+    employeesData[editEmployeeIdx].lastName = editModal.querySelector('#editEmployeeLastName').value;
+    employeesData[editEmployeeIdx].email = editModal.querySelector('#editEmployeeEmail').value;
+    employeesData[editEmployeeIdx].mobile = editModal.querySelector('#editEmployeePhone').value;
+    employeesData[editEmployeeIdx].joiningDate = editModal.querySelector('#editEmployeeJoiningDate').value;
+    employeesData[editEmployeeIdx].jobType = editModal.querySelector('#editEmployeeJobType').value;
 
     // Close the modal
     const editModalInstance = bootstrap.Modal.getInstance(editModal);

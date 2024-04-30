@@ -119,10 +119,11 @@
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="addJobForm">
                         <div class="container">
                             <div class="row gx-3">
                                 <div class="col-md-12">
+                                    <input type="hidden" id="jobIdInput">
                                     <div class="mb-3">
                                         <input type="date" class="form-control form-control-sm" id="jobDateInput"
                                             required>
@@ -192,6 +193,10 @@
                             <td id="jobId"></td>
                         </tr>
                         <tr>
+                            <th>Job ID</th>
+                            <td id="jobJobId"></td>
+                        </tr>
+                        <tr>
                             <th>Opening Date</th>
                             <td id="jobDate"></td>
                         </tr>
@@ -202,8 +207,8 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <a href="#" class="btn btn-sm btn-warning" id="jobEditBtn" data-bs-toggle="modal"
-                        data-bs-target="#jobUpdateModal">
+                    <a href="#" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#jobUpdateModal"
+                        onclick="handleUpdateFromDetailClick();">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-pencil-square" viewBox="0 0 16 16">
                             <path
@@ -245,6 +250,7 @@
                         <div class="container">
                             <div class="row gx-3">
                                 <div class="col-md-12">
+                                    <input type="hidden" id="editJobId">
                                     <div class="mb-3">
                                         <input type="date" class="form-control form-control-sm" id="editJobDate"
                                             required>
@@ -260,7 +266,7 @@
 
                                 <div class="col-md-9">
                                     <div class="d-grid">
-                                        <button type="submit" class="btn btn-sm btn-warning">
+                                        <button type="submit" class="btn btn-sm btn-warning" id="editJobSave">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                                                 <path
@@ -311,7 +317,7 @@
                 </div>
 
                 <div class="modal-footer d-flex justify-content-center">
-                    <button type="submit" class="btn btn-sm btn-danger" data-bs-target="#">
+                    <button type="submit" class="btn btn-sm btn-danger" data-bs-target="#" id="deleteJobConfirm">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-trash-fill" viewBox="0 0 16 16">
                             <path
@@ -339,126 +345,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="jobScript.js"></script>
 
-    <script>
-        // Sample job data
-        const jobData = [
-            { openingDate: '2023-03-31', jobName: "Data Analyst" },
-            { openingDate: '2022-09-21', jobName: "Data Engineer" },
-            { openingDate: '2022-11-19', jobName: "Data Scientist" },
-            { openingDate: '2023-06-24', jobName: "Web Developer" }
-        ];
-
-        // Function to populate the Update modal with job data
-        function populateUpdateModal(jobIndex) {
-            const job = jobData[jobIndex];
-            const modal = document.getElementById('jobUpdateModal');
-            modal.querySelector('#editJobDate').value = job.openingDate;
-            modal.querySelector('#editJobName').value = job.jobName;
-        }
-
-        // Function to handle Update button click
-        function handleUpdateButtonClick(jobIndex) {
-            populateUpdateModal(jobIndex);
-        }
-
-        const jobNames = [
-            { id:1, joiningDate: '2023-03-31', jobRole: 'Data Analyst' }, 
-            { id:2, joiningDate: '2022-09-21', jobRole: 'Data Engineer' }, 
-            { id:3, joiningDate: '2022-11-19', jobRole: 'Data Scientist' }, 
-            { id:4, joiningDate: '2023-06-23', jobRole: 'Web Developer' }
-        ];
-
-        function populateDeleteModal(jobIdx) {
-            const jobContent = jobNames[jobIdx];
-            const deleteModal = document.getElementById('jobDeleteModal');
-            deleteModal.querySelector('#deleteJobName').innerHTML = jobContent.jobRole;
-        }
-
-        function handleDeleteButtonClick(jobIdx) {
-            populateDeleteModal(jobIdx);
-            const deleteJob = () => {
-                jobNames.splice(jobIdx, 1);
-
-                // Close the modal
-                const deletingModal = document.getElementById('jobDeleteModal');
-                const modalInstance = bootstrap.Modal.getInstance(deletingModal);
-                modalInstance.hide();
-
-                // Update the displayed job list
-                displayJobs();
-            };
-
-            // Attach click event to delete button
-            document.querySelector('#jobDeleteModal .btn-danger').addEventListener('click', deleteJob);
-        }
-        function displayJobs() {
-            const jobsTable = document.querySelector('.table-bordered');
-            jobsTable.innerHTML = `
-        <tr class="table-secondary text-center">
-            <th>Id</th>
-            <th>Job Name</th>
-            <th>Action</th>
-        </tr>
-    `;
-
-            jobNames.forEach((job, idx) => {
-                jobsTable.innerHTML += `
-            <tr class="text-center">
-                <td>${idx + 1}</td>
-                <td>${job.jobRole}</td>
-                <td>
-                    <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                        data-bs-target="#jobDetailModal" onclick="populateJobDetail(jobsData[${idx}]);">
-                        Details
-                    </a>
-                    <a href="#" class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
-                        data-bs-target="#jobUpdateModal" onclick="handleUpdateButtonClick(${idx});">
-                        Edit
-                    </a>
-                    <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                        data-bs-target="#jobDeleteModal" onclick="handleDeleteButtonClick(${idx});">
-                        Delete
-                    </a>
-                </td>
-            </tr>
-        `;
-            });
-        }
-        displayJobs();
-
-        function handleAddJobSubmit(event) {
-            event.preventDefault(); // Prevent the form from submitting and refreshing the page
-
-            // Get the job name from the input field
-            const jobNameInput = document.querySelector('#jobNameInput');
-            const jobName = jobNameInput.value.trim();
-
-            // Get the job date from the input field
-            const jobDateInput = document.querySelector('#jobDateInput');
-            const jobDate = jobDateInput.value.trim();
-
-            // Add the new job to the jobNames array
-            jobNames.push({ jobRole: jobName, joiningDate: jobDate });
-
-            // Clear the input fields
-            jobNameInput.value = "";
-            jobDateInput.value = "";
-
-            // Close the modal
-            const addingModal = document.getElementById('addJob');
-            const addModalInstance = bootstrap.Modal.getInstance(addingModal);
-            addModalInstance.hide();
-
-            // Update the displayed job list
-            displayJobs();
-        }
-        // Attach submit event listener to the form in the "Add Job" modal
-        document.querySelector('#addJob form').addEventListener('submit', handleAddJobSubmit);
-        // Update the displayed job list
-        displayJobs();
-
-    </script>
-
 </body>
-
 </html>
