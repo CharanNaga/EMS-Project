@@ -130,7 +130,7 @@
                                     Edit
                                 </a>
                                 <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#jobDelete1">
+                                    data-bs-target="#jobDeleteModal" onclick="handleDeleteButtonClick(0);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-trash-fill" viewBox="0 0 16 16">
                                         <path
@@ -166,7 +166,7 @@
                                     Edit
                                 </a>
                                 <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#jobDelete2">
+                                data-bs-target="#jobDeleteModal" onclick="handleDeleteButtonClick(1);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-trash-fill" viewBox="0 0 16 16">
                                         <path
@@ -202,7 +202,7 @@
                                     Edit
                                 </a>
                                 <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#jobDelete3">
+                                data-bs-target="#jobDeleteModal" onclick="handleDeleteButtonClick(2);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-trash-fill" viewBox="0 0 16 16">
                                         <path
@@ -237,7 +237,7 @@
                                     Edit
                                 </a>
                                 <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#jobDelete4">
+                                data-bs-target="#jobDeleteModal" onclick="handleDeleteButtonClick(3);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-trash-fill" viewBox="0 0 16 16">
                                         <path
@@ -443,14 +443,14 @@
     <!-- Edit Job Modal -->
 
 
-    <!--Job Delete Modal-1 -->
-    <div class="modal fade" id="jobDelete1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <!--Job Delete Modal -->
+    <div class="modal fade" id="jobDeleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-hidden="true" style="backdrop-filter: blur(5px);">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body text-center d-flex justify-content-center align-items-center">
                     <h4 class="fw-light m-0">
-                        Do you want to delete <strong><q>Data Analyst</q></strong>?
+                        Do you want to delete <strong><q id="deleteJobName"></q></strong>?
                     </h4>
                     <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -479,125 +479,7 @@
             </div>
         </div>
     </div>
-    <!-- Job Delete Modal-1 -->
-
-
-    <!--Job Delete Modal-2 -->
-    <div class="modal fade" id="jobDelete2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-hidden="true" style="backdrop-filter: blur(5px);">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body text-center d-flex justify-content-center align-items-center">
-                    <h4 class="fw-light m-0">
-                        Do you want to delete <strong><q>Data Engineer</q></strong>?
-                    </h4>
-                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-footer d-flex justify-content-center">
-                    <button type="submit" class="btn btn-sm btn-danger" data-bs-target="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-trash-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
-                        </svg>
-                        Delete
-                    </button>
-
-                    <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
-                            <path fill-rule="evenodd"
-                                d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
-                        </svg>
-                        Close
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Job Delete Modal-2 -->
-
-
-    <!--Job Delete Modal-3 -->
-    <div class="modal fade" id="jobDelete3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-hidden="true" style="backdrop-filter: blur(5px);">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body text-center d-flex justify-content-center align-items-center">
-                    <h4 class="fw-light m-0">
-                        Do you want to delete <strong><q>Data Scientist</q></strong>?
-                    </h4>
-                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-footer d-flex justify-content-center">
-                    <button type="submit" class="btn btn-sm btn-danger" data-bs-target="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-trash-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
-                        </svg>
-                        Delete
-                    </button>
-
-                    <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
-                            <path fill-rule="evenodd"
-                                d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
-                        </svg>
-                        Close
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Job Delete Modal-3 -->
-
-
-    <!--Job Delete Modal-4 -->
-    <div class="modal fade" id="jobDelete4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-hidden="true" style="backdrop-filter: blur(5px);">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body text-center d-flex justify-content-center align-items-center">
-                    <h4 class="fw-light m-0">
-                        Do you want to delete <strong><q>Web Developer</q></strong>?
-                    </h4>
-                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-footer d-flex justify-content-center">
-                    <button type="submit" class="btn btn-sm btn-danger" data-bs-target="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-trash-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
-                        </svg>
-                        Delete
-                    </button>
-
-                    <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
-                            <path fill-rule="evenodd"
-                                d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
-                        </svg>
-                        Close
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Job Delete Modal-4 -->
-
+    <!-- Job Delete Modal -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -668,6 +550,22 @@
     // Function to handle Update button click
     function handleUpdateButtonClick(jobIndex) {
         populateUpdateModal(jobIndex);
+    }
+</script>
+
+<script>
+    const jobNames = [
+        {jobRole: 'Data Analyst'}, {jobRole: 'Data Engineer'}, {jobRole: 'Data Scientist'}, {jobRole: 'Web Developer'}
+    ];
+
+    function populateDeleteModal(jobIdx){
+        const jobContent = jobNames[jobIdx];
+        const deleteModal = document.getElementById('jobDeleteModal');
+        deleteModal.querySelector('#deleteJobName').innerHTML = jobContent.jobRole;
+    }
+
+    function handleDeleteButtonClick(jobIdx){
+        populateDeleteModal(jobIdx);
     }
 </script>
 </body>
