@@ -119,46 +119,49 @@
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="addEmployeeForm">
                         <div class="container">
                             <div class="row gx-3">
                                 <div class="col-md-12">
+                                    <input type="hidden" id="employeeIdInput">
                                     <div class="mb-3">
-                                        <input type="date" class="form-control form-control-sm" required>
+                                        <input type="date" class="form-control form-control-sm"
+                                            id="employeeJoiningDateInput" required>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <input type="text" class="form-control form-control-sm" placeholder="First Name"
-                                            required>
+                                            id="employeeFirstNameInput" required>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <input type="text" class="form-control form-control-sm" placeholder="Last Name"
-                                            required>
+                                            id="employeeLastNameInput" required>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <input type="email" class="form-control form-control-sm" placeholder="Email ID"
-                                            required>
+                                            id="employeeEmailInput" required>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <input type="tel" class="form-control form-control-sm" placeholder="Phone No"
-                                            required>
+                                            id="employeePhoneInput" required>
                                     </div>
                                 </div>
 
                                 <div class="col-md-12">
                                     <div class="mb-3">
-                                        <select class="form-select form-select-sm" aria-label="Assigned Job">
+                                        <select class="form-select form-select-sm" id="employeeJobTypeInput"
+                                            aria-label="Assigned Job">
                                             <option selected>Select Job</option>
                                             <option value="Data Engineer">Data Engineer</option>
                                             <option value="Data Scientist">Data Scientist</option>
@@ -250,8 +253,8 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <a href="#" class="btn btn-sm btn-warning" id="employeeEditBtn" data-bs-toggle="modal"
-                        data-bs-target="#employeeUpdateModal">
+                    <a href="#" class="btn btn-sm btn-warning" data-bs-toggle="modal"
+                        data-bs-target="#employeeUpdateModal" onclick="handleEditFromDetailClick();">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-pencil-square" viewBox="0 0 16 16">
                             <path
@@ -293,9 +296,10 @@
                         <div class="container">
                             <div class="row gx-3">
                                 <div class="col-md-12">
+                                    <input type="hidden" id="editEmployeeId">
                                     <div class="mb-3">
-                                        <input type="date" class="form-control form-control-sm" id="editEmployeeDate"
-                                            required>
+                                        <input type="date" class="form-control form-control-sm"
+                                            id="editEmployeeJoiningDate" required>
                                     </div>
                                 </div>
 
@@ -330,7 +334,7 @@
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <select class="form-select form-select-sm" aria-label="Assigned Job"
-                                            id="editEmployeeJob">
+                                            id="editEmployeeJobType">
                                             <option>Select Job</option>
                                             <option value="Data Engineer">Data Engineer</option>
                                             <option value="Data Scientist">Data Scientist</option>
@@ -342,7 +346,7 @@
 
                                 <div class="col-md-9">
                                     <div class="d-grid">
-                                        <button type="submit" class="btn btn-sm btn-warning">
+                                        <button type="submit" class="btn btn-sm btn-warning" id="editEmployeeSave">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                                                 <path
@@ -380,7 +384,7 @@
     <!-- Edit Employee Modal -->
 
 
-    <!--Employee Delete Modal-1 -->
+    <!--Employee Delete Modal -->
     <div class="modal fade" id="employeeDeleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-hidden="true" style="backdrop-filter: blur(5px);">
         <div class="modal-dialog modal-dialog-centered">
@@ -393,7 +397,7 @@
                 </div>
 
                 <div class="modal-footer d-flex justify-content-center">
-                    <button type="submit" class="btn btn-sm btn-danger" data-bs-target="#">
+                    <button type="submit" class="btn btn-sm btn-danger" data-bs-target="#" id="deleteEmployeeConfirm">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-trash-fill" viewBox="0 0 16 16">
                             <path
@@ -420,99 +424,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="employeeScript.js"></script>
-    <script>
-        // Sample employee data
-        const empData = [
-            { joiningDate: '2023-03-31', firstName: "Charan", lastName: "Singh", email: "charan@test.com", phone: "+91-8919701146", job: "Data Analyst" },
-            { joiningDate: '2022-09-21', firstName: "Swaroop", lastName: "Teja", email: "swaroop@test.com", phone: "+91-8829602145", job: "Data Engineer" },
-            { joiningDate: '2022-11-19', firstName: "Vishnu", lastName: "Reddy", email: "vishnu@test.com", phone: "+91-8236703262", job: "Data Scientist" },
-            { joiningDate: '2023-06-24', firstName: "Neeraj", lastName: "Krishna", email: "neeraj@test.com", phone: "+91-8829602145", job: "Web Developer" },
-        ];
-
-        // Function to populate the Edit modal with employee data
-        function populateEditModal(employeeIndex) {
-            const employee = empData[employeeIndex];
-            const modal = document.getElementById('employeeUpdateModal');
-            modal.querySelector('#editEmployeeDate').value = employee.joiningDate;
-            modal.querySelector('#editEmployeeFirstName').value = employee.firstName;
-            modal.querySelector('#editEmployeeLastName').value = employee.lastName;
-            modal.querySelector('#editEmployeeEmail').value = employee.email;
-            modal.querySelector('#editEmployeePhone').value = employee.phone;
-            modal.querySelector('#editEmployeeJob').value = employee.job;
-        }
-
-        // Function to handle edit button click
-        function handleEditButtonClick(employeeIndex) {
-            populateEditModal(employeeIndex);
-        }
-
-        const employeeNames = [
-            { id: 1, employeeId: 403, empName: 'Charan Singh', email: 'charan@test.com' },
-            { id: 2, employeeId: 405, empName: 'Swaroop Teja', email: 'swaroop@test.com'},
-            { id: 3, employeeId: 429, empName: 'Vishnu Reddy', email: 'vishnu@test.com' },
-            { id: 4, employeeId: 447, empName: 'Neeraj Krishna', email:'neeraj@test.com' }
-        ];
-
-        function populateRemoveModal(empIdx) {
-            const employeeContent = employeeNames[empIdx];
-            const removeModal = document.getElementById('employeeDeleteModal');
-            removeModal.querySelector('#deleteEmployeeName').innerHTML = employeeContent.empName;
-        }
-
-        function handleRemoveButtonClick(empIdx) {
-            populateRemoveModal(empIdx);
-            const deleteEmp = () => {
-                employeeNames.splice(empIdx, 1);
-
-                // Close the modal
-                const closingModal = document.getElementById('employeeDeleteModal');
-                const deleteModalInstance = bootstrap.Modal.getInstance(closingModal);
-                deleteModalInstance.hide();
-
-                // Update the displayed employees list
-                displayEmployees();
-            };
-
-            // Attach click event to delete button
-            document.querySelector('#employeeDeleteModal .btn-danger').addEventListener('click', deleteEmp);
-        }
-
-        function displayEmployees() {
-            const employeesTable = document.querySelector('.table-bordered');
-            employeesTable.innerHTML = `
-        <tr class="table-secondary text-center">
-            <th>Id</th>
-            <th>Employee Id</th>
-            <th>Name</th>
-            <th>Action</th>
-        </tr>
-    `;
-
-            employeeNames.forEach((employee, idx) => {
-                employeesTable.innerHTML += `
-            <tr class="text-center">
-                <td>${idx + 1}</td>
-                <td>${employee.employeeId}</td>
-                <td>${employee.empName}</td>
-                <td>
-                    <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                        data-bs-target="#employeeDetailModal" onclick="populateEmployeeDetail(employeesData[${idx}]);">
-                        Details
-                    </a>
-                    <a href="#" class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
-                        data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(${idx});">
-                        Edit
-                    </a>
-                    <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                        data-bs-target="#employeeDeleteModal" onclick="handleRemoveButtonClick(${idx});">
-                        Delete
-                    </a>
-                </td>
-            </tr>
-        `;
-            });
-        }
-        displayEmployees();
-    </script>
 </body>
 </html>
