@@ -166,7 +166,7 @@
                                     Edit
                                 </a>
                                 <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#jobDeleteModal" onclick="handleDeleteButtonClick(1);">
+                                    data-bs-target="#jobDeleteModal" onclick="handleDeleteButtonClick(1);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-trash-fill" viewBox="0 0 16 16">
                                         <path
@@ -202,7 +202,7 @@
                                     Edit
                                 </a>
                                 <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#jobDeleteModal" onclick="handleDeleteButtonClick(2);">
+                                    data-bs-target="#jobDeleteModal" onclick="handleDeleteButtonClick(2);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-trash-fill" viewBox="0 0 16 16">
                                         <path
@@ -237,7 +237,7 @@
                                     Edit
                                 </a>
                                 <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#jobDeleteModal" onclick="handleDeleteButtonClick(3);">
+                                    data-bs-target="#jobDeleteModal" onclick="handleDeleteButtonClick(3);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-trash-fill" viewBox="0 0 16 16">
                                         <path
@@ -482,92 +482,44 @@
     <!-- Job Delete Modal -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Function to populate job detail modal with data
-        function populateJobDetail(jobData) {
-            document.getElementById('jobId').innerText = jobData.id;
-            document.getElementById('jobDate').innerText = jobData.jobDate;
-            document.getElementById('jobName').innerText = jobData.jobName;
-        }
+    <script src="jobScript.js"></script>
 
-        // Example job data for four records
-        var jobsData = [
-            {
-                id: 1,
-                jobDate: '31st March 2023',
-                jobName: 'Data Analyst'
-            },
-            {
-                id: 2,
-                jobDate: '21st September 2022',
-                jobName: 'Data Engineer'
-            },
-            {
-                id: 3,
-                jobDate: '19th November 2022',
-                jobName: 'Data Scientist'
-            },
-            {
-                id: 4,
-                jobDate: '24th June 2023',
-                jobName: 'Web Developer'
-            }
+    <script>
+        // Sample job data
+        const jobData = [
+            { openingDate: '2023-03-31', jobName: "Data Analyst" },
+            { openingDate: '2022-09-21', jobName: "Data Engineer" },
+            { openingDate: '2022-11-19', jobName: "Data Scientist" },
+            { openingDate: '2023-06-24', jobName: "Web Developer" }
         ];
 
-        // Display details for the first job by default
-        populateJobDetail(jobsData[0]);
-
-        // Set event listeners to change job details when clicking on different jobs
-        for (let i = 0; i < jobsData.length; i++) {
-            document.getElementById('jobDetail' + (i + 1)).addEventListener('click', function () {
-                changeJobDetail(i);
-            });
+        // Function to populate the Update modal with job data
+        function populateUpdateModal(jobIndex) {
+            const job = jobData[jobIndex];
+            const modal = document.getElementById('jobUpdateModal');
+            modal.querySelector('#editJobDate').value = job.openingDate;
+            modal.querySelector('#editJobName').value = job.jobName;
         }
 
-        // Function to change job details in the modal
-        function changeJobDetail(index) {
-            populateJobDetail(jobsData[index]);
+        // Function to handle Update button click
+        function handleUpdateButtonClick(jobIndex) {
+            populateUpdateModal(jobIndex);
+        }
+
+        const jobNames = [
+            { jobRole: 'Data Analyst' }, { jobRole: 'Data Engineer' }, { jobRole: 'Data Scientist' }, { jobRole: 'Web Developer' }
+        ];
+
+        function populateDeleteModal(jobIdx) {
+            const jobContent = jobNames[jobIdx];
+            const deleteModal = document.getElementById('jobDeleteModal');
+            deleteModal.querySelector('#deleteJobName').innerHTML = jobContent.jobRole;
+        }
+
+        function handleDeleteButtonClick(jobIdx) {
+            populateDeleteModal(jobIdx);
         }
     </script>
 
-<script>
-    // Sample job data
-    const jobData = [
-        { openingDate: '2023-03-31', jobName: "Data Analyst" },
-        { openingDate: '2022-09-21', jobName: "Data Engineer" },
-        { openingDate: '2022-11-19', jobName: "Data Scientist" },
-        { openingDate: '2023-06-24', jobName: "Web Developer" }
-    ];
-
-    // Function to populate the Update modal with job data
-    function populateUpdateModal(jobIndex) {
-        const job = jobData[jobIndex];
-        const modal = document.getElementById('jobUpdateModal');
-        modal.querySelector('#editJobDate').value = job.openingDate;
-        modal.querySelector('#editJobName').value = job.jobName;
-    }
-
-    // Function to handle Update button click
-    function handleUpdateButtonClick(jobIndex) {
-        populateUpdateModal(jobIndex);
-    }
-</script>
-
-<script>
-    const jobNames = [
-        {jobRole: 'Data Analyst'}, {jobRole: 'Data Engineer'}, {jobRole: 'Data Scientist'}, {jobRole: 'Web Developer'}
-    ];
-
-    function populateDeleteModal(jobIdx){
-        const jobContent = jobNames[jobIdx];
-        const deleteModal = document.getElementById('jobDeleteModal');
-        deleteModal.querySelector('#deleteJobName').innerHTML = jobContent.jobRole;
-    }
-
-    function handleDeleteButtonClick(jobIdx){
-        populateDeleteModal(jobIdx);
-    }
-</script>
 </body>
-
 </html>

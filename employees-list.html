@@ -114,25 +114,33 @@
                             <td>charan@test.com</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                                    data-bs-target="#employeeDetailModal" onclick="populateEmployeeDetail(employeesData[0]);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
-                                      </svg>
+                                    data-bs-target="#employeeDetailModal"
+                                    onclick="populateEmployeeDetail(employeesData[0]);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
+                                    </svg>
                                     Details
                                 </a>
                                 <a href="#" class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
-                                data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(0);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                                      </svg>
+                                    data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(0);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                                    </svg>
                                     Edit
                                 </a>
                                 <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
                                     data-bs-target="#employeeDeleteModal" onclick="handleRemoveButtonClick(0);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
-                                      </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+                                    </svg>
                                     Delete
                                 </a>
                             </td>
@@ -145,25 +153,33 @@
                             <td>swaroop@test.com</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                                    data-bs-target="#employeeDetailModal" onclick="populateEmployeeDetail(employeesData[1]);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
-                                      </svg>
+                                    data-bs-target="#employeeDetailModal"
+                                    onclick="populateEmployeeDetail(employeesData[1]);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
+                                    </svg>
                                     Details
                                 </a>
                                 <a href="#" class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
-                                data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(1);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                                      </svg>
+                                    data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(1);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                                    </svg>
                                     Edit
                                 </a>
                                 <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#employeeDeleteModal" onclick="handleRemoveButtonClick(1);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
-                                      </svg>
+                                    data-bs-target="#employeeDeleteModal" onclick="handleRemoveButtonClick(1);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+                                    </svg>
                                     Delete
                                 </a>
                             </td>
@@ -176,25 +192,33 @@
                             <td>vishnu@test.com</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                                    data-bs-target="#employeeDetailModal" onclick="populateEmployeeDetail(employeesData[2]);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
-                                      </svg>
+                                    data-bs-target="#employeeDetailModal"
+                                    onclick="populateEmployeeDetail(employeesData[2]);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
+                                    </svg>
                                     Details
                                 </a>
                                 <a href="#" class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
-                                data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(2);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                                      </svg>
+                                    data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(2);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                                    </svg>
                                     Edit
                                 </a>
                                 <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#employeeDeleteModal" onclick="handleRemoveButtonClick(2);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
-                                      </svg>
+                                    data-bs-target="#employeeDeleteModal" onclick="handleRemoveButtonClick(2);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+                                    </svg>
                                     Delete
                                 </a>
                             </td>
@@ -206,25 +230,33 @@
                             <td>neeraj@test.com</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-info me-2" data-bs-toggle="modal"
-                                    data-bs-target="#employeeDetailModal" onclick="populateEmployeeDetail(employeesData[3]);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
-                                      </svg>
+                                    data-bs-target="#employeeDetailModal"
+                                    onclick="populateEmployeeDetail(employeesData[3]);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
+                                    </svg>
                                     Details
                                 </a>
                                 <a href="#" class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
-                                data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(3);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                                      </svg>
+                                    data-bs-target="#employeeUpdateModal" onclick="handleEditButtonClick(3);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                                    </svg>
                                     Edit
                                 </a>
                                 <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#employeeDeleteModal" onclick="handleRemoveButtonClick(3);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
-                                      </svg>
+                                    data-bs-target="#employeeDeleteModal" onclick="handleRemoveButtonClick(3);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+                                    </svg>
                                     Delete
                                 </a>
                             </td>
@@ -237,158 +269,178 @@
     <!-- Employees Data -->
 
     <!-- Add Employee Modal -->
-    <div class="modal fade" id="addEmployee" data-bs-backdrop="static" data-bs-keyboard="false"
-        tabindex="-1" aria-hidden="true" style="backdrop-filter: blur(5px);">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header text-bg-dark">
-                        <h5 class="modal-title">Add Employee Details</h5>
-                        <button type="button" class="btn btn-close bg-white" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="container">
-                                <div class="row gx-3">
-                                    <div class="col-md-12">
-                                        <div class="mb-3">
-                                            <input type="date" class="form-control form-control-sm" required>
-                                        </div>
+    <div class="modal fade" id="addEmployee" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-hidden="true" style="backdrop-filter: blur(5px);">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h5 class="modal-title">Add Employee Details</h5>
+                    <button type="button" class="btn btn-close bg-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="container">
+                            <div class="row gx-3">
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <input type="date" class="form-control form-control-sm" required>
                                     </div>
+                                </div>
 
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control form-control-sm" placeholder="First Name" required>
-                                        </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control form-control-sm" placeholder="First Name"
+                                            required>
                                     </div>
+                                </div>
 
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control form-control-sm" placeholder="Last Name" required>
-                                        </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control form-control-sm" placeholder="Last Name"
+                                            required>
                                     </div>
+                                </div>
 
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <input type="email" class="form-control form-control-sm" placeholder="Email ID" required>
-                                        </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control form-control-sm" placeholder="Email ID"
+                                            required>
                                     </div>
+                                </div>
 
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <input type="tel" class="form-control form-control-sm" placeholder="Phone No" required>
-                                        </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <input type="tel" class="form-control form-control-sm" placeholder="Phone No"
+                                            required>
                                     </div>
+                                </div>
 
-                                    <div class="col-md-12">
-                                        <div class="mb-3">
-                                            <select class="form-select form-select-sm" aria-label="Assigned Job">
-                                                <option selected>Select Job</option>
-                                                <option value="Data Engineer">Data Engineer</option>
-                                                <option value="Data Scientist">Data Scientist</option>
-                                                <option value="Data Analyst">Data Analyst</option>
-                                                <option value="Web Developer">Web Developer</option>
-                                            </select>
-                                        </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <select class="form-select form-select-sm" aria-label="Assigned Job">
+                                            <option selected>Select Job</option>
+                                            <option value="Data Engineer">Data Engineer</option>
+                                            <option value="Data Scientist">Data Scientist</option>
+                                            <option value="Data Analyst">Data Analyst</option>
+                                            <option value="Web Developer">Web Developer</option>
+                                        </select>
                                     </div>
+                                </div>
 
-                                    <div class="col-md-9">
-                                        <div class="d-grid">
-                                            <button type="submit" class="btn btn-sm btn-success">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
-                                                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                                                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
-                                                  </svg>
-                                                Employee
-                                            </button>
-                                        </div>
+                                <div class="col-md-9">
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-sm btn-success">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                                <path fill-rule="evenodd"
+                                                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
+                                            </svg>
+                                            Employee
+                                        </button>
                                     </div>
+                                </div>
 
-                                    <div class="col-md-3">
-                                        <div class="d-grid">
-                                            <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
-                                                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
-                                                </svg>
-                                                Close
-                                            </button>
-                                        </div>
+                                <div class="col-md-3">
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+                                            </svg>
+                                            Close
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
-            </div>
-    </div>
-    <!-- Add Employee Modal -->
-
-     <!-- Employee Detail Modal -->
-<div class="modal fade" id="employeeDetailModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true" style="backdrop-filter: blur(5px);">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header text-bg-dark">
-                <h5 class="modal-title">Employee Details</h5>
-                <button type="button" class="btn btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-0">
-                <table class="table table-bordered small mb-0">
-                    <tr>
-                        <th class="w-50">ID</th>
-                        <td id="employeeId"></td>
-                    </tr>
-                    <tr>
-                        <th>Employee ID</th>
-                        <td id="employeeEmployeeId"></td>
-                    </tr>
-                    <tr>
-                        <th>First Name</th>
-                        <td id="employeeFirstName"></td>
-                    </tr>
-                    <tr>
-                        <th>Last Name</th>
-                        <td id="employeeLastName"></td>
-                    </tr>
-                    <tr>
-                        <th>Email ID</th>
-                        <td id="employeeEmail"></td>
-                    </tr>
-                    <tr>
-                        <th>Mobile Number</th>
-                        <td id="employeeMobile"></td>
-                    </tr>
-                    <tr>
-                        <th>Joining Date</th>
-                        <td id="employeeJoiningDate"></td>
-                    </tr>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn btn-sm btn-warning" id="employeeEditBtn" data-bs-toggle="modal" data-bs-target="#employeeUpdateModal">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                    </svg>
-                    Edit
-                </a>
-                <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
-                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
-                    </svg>
-                    Close
-                </button>
             </div>
         </div>
     </div>
-</div>
+    <!-- Add Employee Modal -->
+
+    <!-- Employee Detail Modal -->
+    <div class="modal fade" id="employeeDetailModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-hidden="true" style="backdrop-filter: blur(5px);">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h5 class="modal-title">Employee Details</h5>
+                    <button type="button" class="btn btn-close bg-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <table class="table table-bordered small mb-0">
+                        <tr>
+                            <th class="w-50">ID</th>
+                            <td id="employeeId"></td>
+                        </tr>
+                        <tr>
+                            <th>Employee ID</th>
+                            <td id="employeeEmployeeId"></td>
+                        </tr>
+                        <tr>
+                            <th>First Name</th>
+                            <td id="employeeFirstName"></td>
+                        </tr>
+                        <tr>
+                            <th>Last Name</th>
+                            <td id="employeeLastName"></td>
+                        </tr>
+                        <tr>
+                            <th>Email ID</th>
+                            <td id="employeeEmail"></td>
+                        </tr>
+                        <tr>
+                            <th>Mobile Number</th>
+                            <td id="employeeMobile"></td>
+                        </tr>
+                        <tr>
+                            <th>Joining Date</th>
+                            <td id="employeeJoiningDate"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-sm btn-warning" id="employeeEditBtn" data-bs-toggle="modal"
+                        data-bs-target="#employeeUpdateModal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path
+                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                            <path fill-rule="evenodd"
+                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                        </svg>
+                        Edit
+                    </a>
+                    <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
+                            <path fill-rule="evenodd"
+                                d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+                        </svg>
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Employee Detail Modal -->
 
 
-     <!-- Edit Employee Modal -->
-     <div class="modal fade" id="employeeUpdateModal" data-bs-backdrop="static" data-bs-keyboard="false"
-    tabindex="-1" aria-hidden="true" style="backdrop-filter: blur(5px);">
+    <!-- Edit Employee Modal -->
+    <div class="modal fade" id="employeeUpdateModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-hidden="true" style="backdrop-filter: blur(5px);">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header text-bg-dark">
@@ -402,37 +454,43 @@
                             <div class="row gx-3">
                                 <div class="col-md-12">
                                     <div class="mb-3">
-                                        <input type="date" class="form-control form-control-sm" id="editEmployeeDate" required>
+                                        <input type="date" class="form-control form-control-sm" id="editEmployeeDate"
+                                            required>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <input type="text" class="form-control form-control-sm" placeholder="First Name" id="editEmployeeFirstName" required>
+                                        <input type="text" class="form-control form-control-sm" placeholder="First Name"
+                                            id="editEmployeeFirstName" required>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <input type="text" class="form-control form-control-sm" placeholder="Last Name" id="editEmployeeLastName" required>
+                                        <input type="text" class="form-control form-control-sm" placeholder="Last Name"
+                                            id="editEmployeeLastName" required>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <input type="email" class="form-control form-control-sm" placeholder="Email ID" id="editEmployeeEmail" required>
+                                        <input type="email" class="form-control form-control-sm" placeholder="Email ID"
+                                            id="editEmployeeEmail" required>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <input type="tel" class="form-control form-control-sm" placeholder="Phone No" id="editEmployeePhone" required>
+                                        <input type="tel" class="form-control form-control-sm" placeholder="Phone No"
+                                            id="editEmployeePhone" required>
                                     </div>
                                 </div>
 
                                 <div class="col-md-12">
                                     <div class="mb-3">
-                                        <select class="form-select form-select-sm" aria-label="Assigned Job" id="editEmployeeJob">
+                                        <select class="form-select form-select-sm" aria-label="Assigned Job"
+                                            id="editEmployeeJob">
                                             <option>Select Job</option>
                                             <option value="Data Engineer">Data Engineer</option>
                                             <option value="Data Scientist">Data Scientist</option>
@@ -445,10 +503,13 @@
                                 <div class="col-md-9">
                                     <div class="d-grid">
                                         <button type="submit" class="btn btn-sm btn-warning">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                                              </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                                            </svg>
                                             Employee
                                         </button>
                                     </div>
@@ -456,10 +517,14 @@
 
                                 <div class="col-md-3">
                                     <div class="d-grid">
-                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
-                                                <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
                                             </svg>
                                             Close
                                         </button>
@@ -471,154 +536,89 @@
                 </div>
             </div>
         </div>
-     </div>
-     <!-- Edit Employee Modal -->
+    </div>
+    <!-- Edit Employee Modal -->
 
 
-     <!--Employee Delete Modal-1 -->
-     <div class="modal fade" id="employeeDeleteModal" data-bs-backdrop="static" data-bs-keyboard="false"
-     tabindex="-1" aria-hidden="true" style="backdrop-filter: blur(5px);">
-         <div class="modal-dialog modal-dialog-centered">
-             <div class="modal-content">
-                 <div class="modal-body text-center d-flex justify-content-center align-items-center">
+    <!--Employee Delete Modal-1 -->
+    <div class="modal fade" id="employeeDeleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-hidden="true" style="backdrop-filter: blur(5px);">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center d-flex justify-content-center align-items-center">
                     <h4 class="fw-light m-0">
                         Do you want to delete <strong><q id="deleteEmployeeName"></q></strong>?
                     </h4>
                     <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-                 </div>
+                </div>
 
-                 <div class="modal-footer d-flex justify-content-center">
+                <div class="modal-footer d-flex justify-content-center">
                     <button type="submit" class="btn btn-sm btn-danger" data-bs-target="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-trash-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+                        </svg>
                         Delete
                     </button>
 
                     <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
-                            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
+                            <path fill-rule="evenodd"
+                                d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+                        </svg>
                         Close
                     </button>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <!-- Employee Delete Modal -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Employee Delete Modal -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="employeeScript.js"></script>
     <script>
-        // Function to populate employee detail modal with data
-        function populateEmployeeDetail(employeeData) {
-            document.getElementById('employeeId').innerText = employeeData.id;
-            document.getElementById('employeeEmployeeId').innerText = employeeData.employeeId;
-            document.getElementById('employeeFirstName').innerText = employeeData.firstName;
-            document.getElementById('employeeLastName').innerText = employeeData.lastName;
-            document.getElementById('employeeEmail').innerText = employeeData.email;
-            document.getElementById('employeeMobile').innerText = employeeData.mobile;
-            document.getElementById('employeeJoiningDate').innerText = employeeData.joiningDate;
-        }
-    
-        // Example employee data for four records
-        var employeesData = [
-            {
-                id: 1,
-                employeeId: 403,
-                firstName: 'Charan',
-                lastName: 'Singh',
-                email: 'charan@test.com',
-                mobile: '+91-8919701146',
-                joiningDate: '31st March 2023'
-            },
-            {
-                id: 2,
-                employeeId: 405,
-                firstName: 'Swaroop',
-                lastName: 'Teja',
-                email: 'swaroop@test.com',
-                mobile: '+91-8829602145',
-                joiningDate: '21st September 2022'
-            },
-            {
-                id: 3,
-                employeeId: 429,
-                firstName: 'Vishnu',
-                lastName: 'Reddy',
-                email: 'vishnu@test.com',
-                mobile: '+91-8236703262',
-                joiningDate: '19th November 2022'
-            },
-            {
-                id: 4,
-                employeeId: 447,
-                firstName: 'Neeraj',
-                lastName: 'Krishna',
-                email: 'neeraj@test.com',
-                mobile: '+91-7265312582',
-                joiningDate: '24th June 2023'
-            }
+        // Sample employee data
+        const empData = [
+            { joiningDate: '2023-03-31', firstName: "Charan", lastName: "Singh", email: "charan@test.com", phone: "+91-8919701146", job: "Data Analyst" },
+            { joiningDate: '2022-09-21', firstName: "Swaroop", lastName: "Teja", email: "swaroop@test.com", phone: "+91-8829602145", job: "Data Engineer" },
+            { joiningDate: '2022-11-19', firstName: "Vishnu", lastName: "Reddy", email: "vishnu@test.com", phone: "+91-8236703262", job: "Data Scientist" },
+            { joiningDate: '2023-06-24', firstName: "Neeraj", lastName: "Krishna", email: "neeraj@test.com", phone: "+91-8829602145", job: "Web Developer" },
         ];
-    
-        // Display details for the first employee by default
-        populateEmployeeDetail(employeesData[0]);
-    
-        // Set event listeners to change employee details when clicking on different employees
-        for (let i = 0; i < employeesData.length; i++) {
-            document.getElementById('employeeDetail' + (i + 1)).addEventListener('click', function() {
-                changeEmployeeDetail(i);
-            });
+
+        // Function to populate the Edit modal with employee data
+        function populateEditModal(employeeIndex) {
+            const employee = empData[employeeIndex];
+            const modal = document.getElementById('employeeUpdateModal');
+            modal.querySelector('#editEmployeeDate').value = employee.joiningDate;
+            modal.querySelector('#editEmployeeFirstName').value = employee.firstName;
+            modal.querySelector('#editEmployeeLastName').value = employee.lastName;
+            modal.querySelector('#editEmployeeEmail').value = employee.email;
+            modal.querySelector('#editEmployeePhone').value = employee.phone;
+            modal.querySelector('#editEmployeeJob').value = employee.job;
         }
-    
-        // Function to change employee details in the modal
-        function changeEmployeeDetail(index) {
-            populateEmployeeDetail(employeesData[index]);
+
+        // Function to handle edit button click
+        function handleEditButtonClick(employeeIndex) {
+            populateEditModal(employeeIndex);
+        }
+
+        const employeeNames = [
+            { empName: 'Charan Singh' }, { empName: 'Swaroop Teja' }, { empName: 'Vishnu Reddy' }, { empName: 'Neeraj Krishna' }
+        ];
+
+        function populateRemoveModal(empIdx) {
+            const employeeContent = employeeNames[empIdx];
+            const removeModal = document.getElementById('employeeDeleteModal');
+            removeModal.querySelector('#deleteEmployeeName').innerHTML = employeeContent.empName;
+        }
+
+        function handleRemoveButtonClick(empIdx) {
+            populateRemoveModal(empIdx);
         }
     </script>
-
-<script>
-    // Sample employee data
-    const empData = [
-        { joiningDate: '2023-03-31', firstName: "Charan", lastName: "Singh", email: "charan@test.com", phone: "+91-8919701146", job: "Data Analyst" },
-        { joiningDate: '2022-09-21', firstName: "Swaroop", lastName: "Teja", email: "swaroop@test.com", phone: "+91-8829602145", job: "Data Engineer" },
-        { joiningDate: '2022-11-19', firstName: "Vishnu", lastName: "Reddy", email: "vishnu@test.com", phone: "+91-8236703262", job: "Data Scientist" },
-        { joiningDate: '2023-06-24', firstName: "Neeraj", lastName: "Krishna", email: "neeraj@test.com", phone: "+91-8829602145", job: "Web Developer" },
-        // Add more employee data as needed
-    ];
-
-    // Function to populate the Edit modal with employee data
-    function populateEditModal(employeeIndex) {
-        const employee = empData[employeeIndex];
-        const modal = document.getElementById('employeeUpdateModal');
-        modal.querySelector('#editEmployeeDate').value = employee.joiningDate;
-        modal.querySelector('#editEmployeeFirstName').value = employee.firstName;
-        modal.querySelector('#editEmployeeLastName').value = employee.lastName;
-        modal.querySelector('#editEmployeeEmail').value = employee.email;
-        modal.querySelector('#editEmployeePhone').value = employee.phone;
-        modal.querySelector('#editEmployeeJob').value = employee.job;
-    }
-
-    // Function to handle edit button click
-    function handleEditButtonClick(employeeIndex) {
-        populateEditModal(employeeIndex);
-    }
-</script>
-
-<script>
-    const employeeNames = [
-        {empName: 'Charan Singh'}, {empName: 'Swaroop Teja'}, {empName: 'Vishnu Reddy'}, {empName: 'Neeraj Krishna'}
-    ];
-
-    function populateRemoveModal(empIdx){
-        const employeeContent = employeeNames[empIdx];
-        const removeModal = document.getElementById('employeeDeleteModal');
-        removeModal.querySelector('#deleteEmployeeName').innerHTML = employeeContent.empName;
-    }
-
-    function handleRemoveButtonClick(empIdx){
-        populateRemoveModal(empIdx);
-    }
-</script>
 </body>
 </html>
