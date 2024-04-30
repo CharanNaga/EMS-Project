@@ -124,20 +124,21 @@
                             <div class="row gx-3">
                                 <div class="col-md-12">
                                     <div class="mb-3">
-                                        <input type="date" class="form-control form-control-sm" required>
+                                        <input type="date" class="form-control form-control-sm" id="jobDateInput"
+                                            required>
                                     </div>
                                 </div>
 
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <input type="text" class="form-control form-control-sm" placeholder="Job Name"
-                                            required>
+                                            id="jobNameInput" required>
                                     </div>
                                 </div>
 
                                 <div class="col-md-9">
                                     <div class="d-grid">
-                                        <button type="submit" class="btn btn-sm btn-success">
+                                        <button type="submit" class="btn btn-sm btn-success" id="addJobButton">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                                                 <path
@@ -361,7 +362,10 @@
         }
 
         const jobNames = [
-            { jobRole: 'Data Analyst' }, { jobRole: 'Data Engineer' }, { jobRole: 'Data Scientist' }, { jobRole: 'Web Developer' }
+            { id:1, joiningDate: '2023-03-31', jobRole: 'Data Analyst' }, 
+            { id:2, joiningDate: '2022-09-21', jobRole: 'Data Engineer' }, 
+            { id:3, joiningDate: '2022-11-19', jobRole: 'Data Scientist' }, 
+            { id:4, joiningDate: '2023-06-23', jobRole: 'Web Developer' }
         ];
 
         function populateDeleteModal(jobIdx) {
@@ -421,6 +425,38 @@
             });
         }
         displayJobs();
+
+        function handleAddJobSubmit(event) {
+            event.preventDefault(); // Prevent the form from submitting and refreshing the page
+
+            // Get the job name from the input field
+            const jobNameInput = document.querySelector('#jobNameInput');
+            const jobName = jobNameInput.value.trim();
+
+            // Get the job date from the input field
+            const jobDateInput = document.querySelector('#jobDateInput');
+            const jobDate = jobDateInput.value.trim();
+
+            // Add the new job to the jobNames array
+            jobNames.push({ jobRole: jobName, joiningDate: jobDate });
+
+            // Clear the input fields
+            jobNameInput.value = "";
+            jobDateInput.value = "";
+
+            // Close the modal
+            const addingModal = document.getElementById('addJob');
+            const addModalInstance = bootstrap.Modal.getInstance(addingModal);
+            addModalInstance.hide();
+
+            // Update the displayed job list
+            displayJobs();
+        }
+        // Attach submit event listener to the form in the "Add Job" modal
+        document.querySelector('#addJob form').addEventListener('submit', handleAddJobSubmit);
+        // Update the displayed job list
+        displayJobs();
+
     </script>
 
 </body>
